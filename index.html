@@ -67,13 +67,11 @@
       background-color: #dff6ff;
     }
 
-    /* Fade dan zoom */
     @keyframes fadeZoom {
       0% { opacity: 0; transform: scale(0.95) translateY(20px); }
       100% { opacity: 1; transform: scale(1) translateY(0); }
     }
 
-    /* Bintang berkedip */
     .stars {
       position: absolute;
       width: 100%;
@@ -98,7 +96,6 @@
       50% { opacity: 1; }
     }
 
-    /* Bulan sabit */
     .moon {
       position: absolute;
       top: 40px;
@@ -117,7 +114,6 @@
       to { transform: rotate(360deg); }
     }
 
-    /* Ketupat melayang */
     .ketupat {
       position: absolute;
       bottom: -80px;
@@ -138,7 +134,6 @@
 </head>
 <body>
 
-  <!-- Elemen animasi -->
   <div class="stars">
     <script>
       for (let i = 0; i < 70; i++) {
@@ -153,7 +148,7 @@
   </div>
 
   <div class="moon"></div>
-  <div class="ketupat">🥟</div> <!-- Bisa diganti dengan SVG ketupat biar lebih niat -->
+  <div class="ketupat">🥟</div> 
 
   <h1>Taqabbalallahu minna wa minkum</h1>
   <h2>Selamat Hari Raya Idul Fitri 1446 H</h2>
@@ -176,7 +171,6 @@
       }
     }
   
-    // Optional: reset tombol jika audio selesai
     audio.addEventListener("ended", () => {
       btn.textContent = "Putar Ucapan";
     });
