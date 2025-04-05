@@ -163,12 +163,25 @@
   <audio id="audio" src="Selamat Hari Lebaran - Ismail Marzuki.mp3"></audio>
 
   <script>
+    const audio = document.getElementById("audio");
+    const btn = document.querySelector("button");
+  
     function playUcapan() {
-      const audio = document.getElementById("audio");
-      audio.play();
-      alert("Selamat Hari Raya Idul Fitri! 🤲✨");
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "Pause Ucapan";
+      } else {
+        audio.pause();
+        btn.textContent = "Putar Ucapan";
+      }
     }
+  
+    // Optional: reset tombol jika audio selesai
+    audio.addEventListener("ended", () => {
+      btn.textContent = "Putar Ucapan";
+    });
   </script>
+  
 
 <footer style="position: absolute; bottom: 10px; width: 100%; text-align: center; color: #ffffffaa; font-size: 0.9rem; animation: fadeZoom 2s ease-out forwards; animation-delay: 2s; opacity: 0;">
   © 2025 Dibuat oleh Lathoiful Ikhsan | Selamat Idul Fitri 1446 H
